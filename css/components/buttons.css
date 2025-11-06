@@ -51,6 +51,17 @@
     transform: translateY(0);
 }
 
+.btn-text {
+    background-color: transparent;
+    color: var(--color-secondary);
+    text-decoration: none;
+}
+
+.btn-text:hover:not(:disabled) {
+    color: var(--color-primary);
+    background-color: var(--color-primary-light);
+}
+
 .btn-outline {
     background-color: var(--color-white);
     color: var(--color-secondary);
