@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="iKonek - Every Drop Counts. Every Click Matters. Connect communities and save lives through blood donation and humanitarian campaigns.">
+    <title>iKonek - Connecting Communities, Saving Lives</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap" rel="stylesheet">
+    
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/layout.css">
+    
+    <!-- Component Styles -->
+    <link rel="stylesheet" href="css/components/navigation.css">
+    <link rel="stylesheet" href="css/components/hero.css">
+    <link rel="stylesheet" href="css/components/stats.css">
+    <link rel="stylesheet" href="css/components/how-it-works.css">
+    <link rel="stylesheet" href="css/components/campaigns.css">
+    <link rel="stylesheet" href="css/components/about.css">
+    <link rel="stylesheet" href="css/components/hospitals.css">
+    <link rel="stylesheet" href="css/components/footer.css">
+    <link rel="stylesheet" href="css/components/buttons.css">
+    <link rel="stylesheet" href="css/components/cards.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navigation" id="mainNav" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <div class="nav-content">
+                <!-- Logo -->
+                <a href="#hero" class="logo" aria-label="iKonek - Home">
+                    <img src="assets/img/logo-small.png" alt="" class="logo-image" role="presentation">
+                    <span class="logo-text" aria-hidden="true"><span class="logo-i">i</span>Konek</span>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="nav-links" id="navLinks" role="menu">
+                    <a href="#how-it-works" class="nav-link" role="menuitem">
+                        <span class="nav-link-text">How It Works</span>
+                        <span class="nav-link-indicator"></span>
+                    </a>
+                    <a href="#campaigns" class="nav-link" role="menuitem">
+                        <span class="nav-link-text">Campaigns</span>
+                        <span class="nav-link-indicator"></span>
+                    </a>
+                    <a href="#about" class="nav-link" role="menuitem">
+                        <span class="nav-link-text">About Us</span>
+                        <span class="nav-link-indicator"></span>
+                    </a>
+                    <a href="#hospitals" class="nav-link" role="menuitem">
+                        <span class="nav-link-text">Partner Hospitals</span>
+                        <span class="nav-link-indicator"></span>
+                    </a>
+
+                    
+                    <!-- CTA Buttons -->
+                    <div class="nav-actions">
+                        <button class="btn btn-text nav-btn-login" aria-label="Login to your account">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+                                <polyline points="10 17 15 12 10 7"></polyline>
+                                <line x1="15" y1="12" x2="3" y2="12"></line>
+                            </svg>
+                            <span>Login</span>
+                        </button>
+                        <button class="btn btn-primary btn-sm nav-btn-register" aria-label="Create new account">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="8.5" cy="7" r="4"></circle>
+                                <line x1="20" y1="8" x2="20" y2="14"></line>
+                                <line x1="23" y1="11" x2="17" y2="11"></line>
+                            </svg>
+                            <span>Get Started</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Mobile Menu Toggle -->
+                <button 
+                    class="mobile-menu-toggle" 
+                    id="mobileMenuToggle"
+                    aria-label="Open navigation menu" 
+                    aria-expanded="false"
+                    aria-controls="navLinks"
+                >
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu Overlay -->
+        <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero" role="banner" aria-label="Main hero section">
+        <div class="hero-background" aria-hidden="true">
+            <div class="organic-shape shape-1"></div>
+            <div class="organic-shape shape-2"></div>
+            <div class="organic-shape shape-3"></div>
+            <div class="organic-shape shape-4"></div>
+            <div class="organic-shape shape-5"></div>
+            <div class="organic-shape shape-6"></div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <!-- Trust Badge -->
+                    <div class="hero-badge" role="status">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z" fill="#E63946"/>
+                            <path d="M9 12l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span><strong>DOH Verified</strong> • Trusted by 10,000+ Filipinos</span>
+                    </div>
+                    
+                    <h1 class="hero-title">
+                        <span class="hero-title-eyebrow">Welcome to</span>
+                        <span class="hero-title-main">
+                            <span class="hero-title-brand"><span style="color: var(--color-primary);">i</span>Konek</span>
+                        </span>
+                        <span class="hero-title-tagline">
+                            <span class="tagline-highlight">Every Drop Counts.</span>
+                            <span class="tagline-normal">Every Click Saves Lives.</span>
+                        </span>
+                    </h1>
+                    
+                    <p class="hero-description">
+                        The Philippines' most trusted platform connecting donors with hospitals and humanitarian causes. 
+                        <strong>Schedule blood donations, support medical campaigns, and track your life-saving impact</strong>—all in one secure platform.
+                    </p>
+                    
+                    <!-- Value Propositions -->
+                    <div class="hero-features">
+                        <div class="feature-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M20 6L9 17l-5-5" stroke="#E63946" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Book in 2 minutes</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M20 6L9 17l-5-5" stroke="#E63946" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>150+ Verified Hospitals</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M20 6L9 17l-5-5" stroke="#E63946" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>100% Free & Secure</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Call to Actions -->
+                    <div class="hero-cta">
+                        <button class="btn btn-primary btn-lg btn-cta-primary" aria-label="Start donating blood - Sign up now">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            <div class="btn-content">
+                                <span class="btn-text-main">Start Saving Lives</span>
+                                <span class="btn-text-sub">Free Sign Up • No Credit Card</span>
+                            </div>
+                        </button>
+                        <button class="btn btn-outline btn-lg btn-cta-secondary" aria-label="Login to existing account">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>I'm Already a Donor</span>
+                        </button>
+                    </div>
+                    
+                    <!-- Social Proof Stats -->
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-icon-wrapper">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="#E63946" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <circle cx="9" cy="7" r="4" stroke="#E63946" stroke-width="2"/>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="#E63946" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-value">10,000+</div>
+                                <div class="stat-label">Active Donors</div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon-wrapper">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="#E63946" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                </svg>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-value">25,000+</div>
+                                <div class="stat-label">Lives Saved</div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon-wrapper">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" stroke="#E63946" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <polyline points="9 22 9 12 15 12 15 22" stroke="#E63946" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-value">150+</div>
+                                <div class="stat-label">Partner Hospitals</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Trust Indicators -->
+                    <div class="hero-trust-indicators">
+                        <div class="trust-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#28A745" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M9 12l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>SSL Encrypted</span>
+                        </div>
+                        <div class="trust-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#28A745" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M9 12l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Data Privacy Act Compliant</span>
+                        </div>
+                        <div class="trust-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#28A745" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M9 12l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>24/7 Support Available</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="hero-image-container">
+                        <img src="assets/img/hero-image.png" alt="Illustration showing people donating blood at a medical facility" class="hero-image">
+                    </div>
+                    
+                    <!-- Floating Cards with Real-time Updates -->
+                    <div class="hero-card card-appointment" role="complementary" aria-label="Next available appointment">
+                        <div class="card-icon icon-primary">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <rect x="3" y="4" width="18" height="18" rx="2" stroke="#E63946" stroke-width="2"/>
+                                <line x1="16" y1="2" x2="16" y2="6" stroke="#E63946" stroke-width="2" stroke-linecap="round"/>
+                                <line x1="8" y1="2" x2="8" y2="6" stroke="#E63946" stroke-width="2" stroke-linecap="round"/>
+                                <line x1="3" y1="10" x2="21" y2="10" stroke="#E63946" stroke-width="2"/>
+                            </svg>
+                            <div class="card-pulse"></div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-label">Next Available Slot</div>
+                            <div class="card-value">Today, 2:00 PM</div>
+                            <div class="card-badge">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="#28A745">
+                                    <circle cx="12" cy="12" r="10"/>
+                                </svg>
+                                <span>3 spots left</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-card card-campaigns" role="complementary" aria-label="Active campaigns information">
+                        <div class="card-icon icon-secondary">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="#1D3557" stroke-width="2"/>
+                            </svg>
+                            <div class="card-pulse"></div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-label">Active Campaigns</div>
+                            <div class="card-value">23 Fundraisers</div>
+                            <div class="card-badge urgent">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="#FFC107">
+                                    <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
+                                </svg>
+                                <span>5 urgent</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- New Impact Card -->
+                    <div class="hero-card card-impact" role="complementary" aria-label="Total impact statistics">
+                        <div class="card-icon icon-success">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" stroke="#28A745" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-label">This Month</div>
+                            <div class="card-value">₱2.3M Raised</div>
+                            <div class="card-trend">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
+                                    <polyline points="18 15 12 9 6 15" stroke="#28A745" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>+23% from last month</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Trusted Organizations Marquee -->
+        <div class="trusted-by">
+            <div class="trusted-by-card">
+                <div class="trusted-header">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z" fill="#E63946"/>
+                        <path d="M9 12l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <p class="trusted-label">Trusted by <strong>150+ leading healthcare institutions</strong> nationwide</p>
+                </div>
+                <div class="trusted-logos-wrapper">
+                    <div class="trusted-logos" aria-label="Scrolling list of partner organizations">
+                        <span class="logo-item">Red Cross Philippines</span>
+                        <span class="logo-item">Philippine General Hospital</span>
+                        <span class="logo-item">Philippine Heart Center</span>
+                        <span class="logo-item">DOH Blood Services</span>
+                        <span class="logo-item">St. Luke's Medical Center</span>
+                        <span class="logo-item">Makati Medical Center</span>
+                        <span class="logo-item">The Medical City</span>
+                        <span class="logo-item">Veterans Memorial Medical Center</span>
+                        <span class="logo-item">National Kidney Institute</span>
+                        <span class="logo-item">Lung Center of the Philippines</span>
+                        <!-- Duplicate for seamless loop -->
+                        <span class="logo-item">Red Cross Philippines</span>
+                        <span class="logo-item">Philippine General Hospital</span>
+                        <span class="logo-item">Philippine Heart Center</span>
+                        <span class="logo-item">DOH Blood Services</span>
+                        <span class="logo-item">St. Luke's Medical Center</span>
+                        <span class="logo-item">Makati Medical Center</span>
+                        <span class="logo-item">The Medical City</span>
+                        <span class="logo-item">Veterans Memorial Medical Center</span>
+                        <span class="logo-item">National Kidney Institute</span>
+                        <span class="logo-item">Lung Center of the Philippines</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How iKonek Works</h2>
+                <p class="section-description">
+                    Making a difference is just four simple steps away. Start your journey to saving lives today.
+                </p>
+            </div>
+            
+            <div class="steps-container">
+                <div class="step-wrapper">
+                    <div class="step-card">
+                        <div class="step-icon icon-red">
+                            <img src="assets/icons/search.svg" alt="" width="28" height="28">
+                        </div>
+                        <div class="step-content">
+                            <div class="step-number">Step 1</div>
+                            <h3 class="step-title">Find a Hospital</h3>
+                            <p class="step-description">
+                                Browse our network of partner hospitals and blood donation centers across the Philippines.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="step-connector"></div>
+                </div>
+                
+                <div class="step-wrapper">
+                    <div class="step-card">
+                        <div class="step-icon icon-navy">
+                            <img src="assets/icons/schedule.svg" alt="" width="28" height="28">
+                        </div>
+                        <div class="step-content">
+                            <div class="step-number">Step 2</div>
+                            <h3 class="step-title">Schedule Appointment</h3>
+                            <p class="step-description">
+                                Pick a convenient date and time slot that works best for your schedule.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="step-connector"></div>
+                </div>
+                
+                <div class="step-wrapper">
+                    <div class="step-card">
+                        <div class="step-icon icon-red">
+                            <img src="assets/icons/blood-bag.svg" alt="" width="28" height="28">
+                        </div>
+                        <div class="step-content">
+                            <div class="step-number">Step 3</div>
+                            <h3 class="step-title">Donate & Save Lives</h3>
+                            <p class="step-description">
+                                Visit the hospital and make your life-saving donation. Every drop counts!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="step-connector"></div>
+                </div>
+                
+                <div class="step-wrapper">
+                    <div class="step-card">
+                        <div class="step-icon icon-navy">
+                            <img src="assets/icons/tracking.svg" alt="" width="28" height="28">
+                        </div>
+                        <div class="step-content">
+                            <div class="step-number">Step 4</div>
+                            <h3 class="step-title">Track Your Impact</h3>
+                            <p class="step-description">
+                                Receive updates on how your donation is making a difference in your community.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Campaigns Section -->
+    <section class="campaigns" id="campaigns">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Campaigns</h2>
+                <p class="section-description">
+                    Join thousands of Filipinos making a difference. Support these urgent medical fundraising campaigns and help save lives in our community.
+                </p>
+            </div>
+            
+            <div class="campaigns-grid" id="campaignsGrid">
+                <!-- Campaign cards will be dynamically inserted here -->
+            </div>
+            
+            <div class="section-footer">
+                <button class="btn btn-outline-secondary">View All Campaigns</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <div class="about-badge">
+                    <img src="assets/icons/heart.svg" alt="" class="badge-icon" width="16" height="16">
+                    <span>Building a Healthier Philippines</span>
+                </div>
+                <h2 class="section-title">About <span style="color: var(--color-primary);">i</span>Konek</h2>
+                <p class="section-description">
+                    More than a platform—we're a movement connecting communities and transforming lives across the Philippines.
+                </p>
+            </div>
+            
+            <div class="about-hero">
+                <div class="about-hero-content">
+                    <h3 class="about-main-title">
+                        Bridging the gap between <span class="highlight-text">those who can help</span> and <span class="highlight-text">those who need it</span>
+                    </h3>
+                    <p class="about-lead-text">
+                        Born from a vision of making healthcare support accessible to every Filipino, iKonek has become the nation's trusted digital bridge for blood donation and humanitarian causes.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="about-impact">
+                <div class="impact-card">
+                    <div class="impact-icon icon-red">
+                        <img src="assets/icons/donor.svg" alt="" width="32" height="32">
+                    </div>
+                    <div class="impact-content">
+                        <div class="impact-value">10,000+</div>
+                        <div class="impact-label">Active Filipino Donors</div>
+                        <p class="impact-description">Growing community of life-savers</p>
+                    </div>
+                </div>
+                
+                <div class="impact-card">
+                    <div class="impact-icon icon-navy">
+                        <img src="assets/icons/hospital.svg" alt="" width="32" height="32">
+                    </div>
+                    <div class="impact-content">
+                        <div class="impact-value">150+</div>
+                        <div class="impact-label">Partner Hospitals</div>
+                        <p class="impact-description">Nationwide network of trusted facilities</p>
+                    </div>
+                </div>
+                
+                <div class="impact-card">
+                    <div class="impact-icon icon-red">
+                        <img src="assets/icons/heart.svg" alt="" width="32" height="32">
+                    </div>
+                    <div class="impact-content">
+                        <div class="impact-value">₱50M+</div>
+                        <div class="impact-label">Raised for Medical Causes</div>
+                        <p class="impact-description">Direct impact on Filipino families</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="about-mission">
+                <div class="mission-content">
+                    <h3 class="mission-title">Our Mission</h3>
+                    <p class="mission-text">
+                        We're revolutionizing healthcare support in the Philippines by creating a seamless digital experience that connects donors with hospitals and humanitarian campaigns. Through innovative technology and strategic partnerships across Metro Manila, Cebu, Davao, and beyond, we're building a nationwide network of compassion where every Filipino can make a tangible difference with just a few clicks.
+                    </p>
+                    <div class="mission-cta">
+                        <button class="btn btn-primary">
+                            <img src="assets/icons/heart.svg" alt="" width="20" height="20">
+                            Join Our Mission
+                        </button>
+                        <button class="btn btn-outline-secondary">Learn More</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="about-values">
+                <h3 class="values-heading">Our Core Values</h3>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon icon-red">
+                            <img src="assets/icons/heart.svg" alt="" width="28" height="28">
+                        </div>
+                        <div class="value-content">
+                            <h4 class="value-title">Empathy First</h4>
+                            <p class="value-description">
+                                Every life matters. Every contribution counts. We put compassion at the heart of everything we do to build a healthier Philippines.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon icon-navy">
+                            <img src="assets/icons/community.svg" alt="" width="28" height="28">
+                        </div>
+                        <div class="value-content">
+                            <h4 class="value-title">Community Driven</h4>
+                            <p class="value-description">
+                                Connecting Filipinos from Luzon to Mindanao, creating a powerful network of support that transcends boundaries.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon icon-red">
+                            <img src="assets/icons/target.svg" alt="" width="28" height="28">
+                        </div>
+                        <div class="value-content">
+                            <h4 class="value-title">Mission Focused</h4>
+                            <p class="value-description">
+                                Laser-focused on eliminating barriers in blood donation and humanitarian fundraising through technology and innovation.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon icon-navy">
+                            <img src="assets/icons/shield.svg" alt="" width="28" height="28">
+                        </div>
+                        <div class="value-content">
+                            <h4 class="value-title">Trust & Transparency</h4>
+                            <p class="value-description">
+                                Verified hospitals, authenticated campaigns, and complete visibility. Your trust is our foundation, transparency is our promise.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner Hospitals Section -->
+    <section class="hospitals" id="hospitals">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Trusted <span style="color: var(--color-primary);">Partner Hospitals</span></h2>
+                <p class="section-description">
+                    Schedule your life-saving blood donation at any of our <strong>150+ verified partner hospitals</strong> across the Philippines—from Luzon to Mindanao. Safe, convenient, and always near you.
+                </p>
+            </div>
+            
+            <div class="hospitals-grid" id="hospitalsGrid">
+                <!-- Hospital cards will be dynamically inserted here -->
+            </div>
+            
+            <div class="hospitals-cta">
+                <div class="cta-content">
+                    <div class="cta-icon">
+                        <img src="assets/icons/search.svg" alt="Search" width="28" height="28">
+                    </div>
+                    <div class="cta-text">
+                        <h3 class="cta-title">Can't find a hospital near you?</h3>
+                        <p class="cta-description">
+                            We're constantly expanding our network across the Philippines. Help us reach your community.
+                        </p>
+                    </div>
+                    <div class="cta-actions">
+                        <button class="btn btn-primary">
+                            <img src="assets/icons/white-blood-fill.svg" alt="Add" width="16" height="16">
+                            Suggest a Hospital
+                        </button>
+                        <button class="btn btn-outline-secondary">
+                            View All 150+ Hospitals
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <!-- Footer Top - Newsletter & CTA -->
+            <div class="footer-top">
+                <div class="footer-cta-section">
+                    <div class="footer-cta-content">
+                        <h3 class="footer-cta-title">Ready to Make a Difference?</h3>
+                        <p class="footer-cta-description">
+                            Join thousands of Filipinos saving lives through blood donation and humanitarian support
+                        </p>
+                        <div class="footer-cta-buttons">
+                            <button class="btn btn-primary">
+                                <img src="assets/icons/heart.svg" alt="" width="18" height="18">
+                                Become a Donor
+                            </button>
+                            <button class="btn btn-outline-light">
+                                <img src="assets/icons/search.svg" alt="" width="18" height="18">
+                                Find a Hospital
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-newsletter">
+                        <h4 class="newsletter-heading">Stay Updated</h4>
+                        <p class="newsletter-description">
+                            Get the latest updates on blood drives, campaigns, and ways to help your community
+                        </p>
+                        <form class="newsletter-form" id="newsletterForm">
+                            <div class="input-group">
+                                <input 
+                                    type="email" 
+                                    class="newsletter-input" 
+                                    placeholder="Enter your email address"
+                                    aria-label="Email address for newsletter"
+                                    required
+                                >
+                                <button type="submit" class="btn btn-primary newsletter-btn">
+                                    Subscribe
+                                </button>
+                            </div>
+                            <p class="newsletter-privacy">
+                                We respect your privacy. Unsubscribe anytime.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Main - Links & Info -->
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <img src="assets/icons/blood-drop.svg" alt="iKonek Logo" width="20" height="20">
+                        </div>
+                        <span class="logo-text"><span class="logo-i">i</span>Konek</span>
+                    </div>
+                    <p class="footer-tagline">Every Drop Counts. Every Click Matters.</p>
+                    <p class="footer-description">
+                        Connecting communities and saving lives across the Philippines through innovative digital healthcare solutions.
+                    </p>
+                    
+                    <!-- Social Media Links -->
+                    <div class="footer-social">
+                        <h5 class="social-heading">Follow Us</h5>
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="Facebook">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Twitter">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Instagram">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-link" aria-label="LinkedIn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-links-grid">
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Platform</h4>
+                        <ul class="footer-links">
+                            <li><a href="#how-it-works">How It Works</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#hospitals">Partner Hospitals</a></li>
+                            <li><a href="#campaigns">Campaigns</a></li>
+                            <li><a href="#features">Features</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-heading">For Donors</h4>
+                        <ul class="footer-links">
+                            <li><a href="#schedule">Schedule Donation</a></li>
+                            <li><a href="#eligibility">Eligibility Check</a></li>
+                            <li><a href="#history">Donation History</a></li>
+                            <li><a href="#rewards">Donor Rewards</a></li>
+                            <li><a href="#faqs">FAQs</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-heading">For Organizations</h4>
+                        <ul class="footer-links">
+                            <li><a href="#partner">Become a Partner</a></li>
+                            <li><a href="#hospital-portal">Hospital Portal</a></li>
+                            <li><a href="#campaign-create">Create Campaign</a></li>
+                            <li><a href="#resources">Resources</a></li>
+                            <li><a href="#contact">Contact Sales</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Support</h4>
+                        <ul class="footer-links">
+                            <li><a href="#help">Help Center</a></li>
+                            <li><a href="#contact">Contact Us</a></li>
+                            <li><a href="#feedback">Give Feedback</a></li>
+                            <li><a href="#report">Report Issue</a></li>
+                            <li><a href="#safety">Safety Guidelines</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Contact Info -->
+            <div class="footer-contact-bar">
+                <div class="contact-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    <a href="mailto:support@ikonek.ph">support@ikonek.ph</a>
+                </div>
+                <div class="contact-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                    <a href="tel:+6328123456">+63 (02) 8123-4567</a>
+                </div>
+                <div class="contact-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span>Manila, Philippines</span>
+                </div>
+                <div class="contact-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    <span>24/7 Emergency Support</span>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p class="footer-copyright">
+                        © 2025 iKonek. All rights reserved.
+                    </p>
+                    <div class="footer-legal-links">
+                        <a href="#privacy">Privacy Policy</a>
+                        <a href="#terms">Terms of Service</a>
+                        <a href="#cookies">Cookie Policy</a>
+                        <a href="#accessibility">Accessibility</a>
+                    </div>
+                    <div class="footer-badges">
+                        <div class="badge-item" title="DOH Accredited">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V7.3l7-3.11v8.8z"/>
+                            </svg>
+                            <span>DOH Verified</span>
+                        </div>
+                        <div class="badge-item" title="Data Privacy Compliant">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+                            </svg>
+                            <span>Secure</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
