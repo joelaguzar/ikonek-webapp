@@ -248,7 +248,7 @@ class LoginManager {
         
         // Redirect to dashboard after short delay
         setTimeout(() => {
-            window.location.href = '../index.html'; // Change to dashboard page
+            window.location.href = '../pages/dashboard.html'; // Change to dashboard page
         }, 1000);
     }
 
