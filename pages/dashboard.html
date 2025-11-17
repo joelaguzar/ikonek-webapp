@@ -29,15 +29,15 @@
         </div>
 
         <nav class="sidebar-nav">
-            <a href="#" class="nav-item active">
+            <a href="dashboard.html" class="nav-item active">
                 <img src="../assets/icons/dashboard-white.svg" alt="" class="nav-icon" width="20" height="20">
                 <span class="nav-text">Dashboard</span>
             </a>
-            <a href="#" class="nav-item">
+            <a href="schedule-donation.html" class="nav-item">
                 <img src="../assets/icons/schedule.svg" alt="" class="nav-icon" width="20" height="20">
                 <span class="nav-text">Schedule Donation</span>
             </a>
-            <a href="#" class="nav-item">
+            <a href="history.html" class="nav-item">
                 <img src="../assets/icons/history-blue.svg" alt="" class="nav-icon" width="20" height="20">
                 <span class="nav-text">My History</span>
             </a>
@@ -45,7 +45,7 @@
                 <img src="../assets/icons/fundraisers-blue.svg" alt="" class="nav-icon" width="20" height="20">
                 <span class="nav-text">Fundraisers</span>
             </a>
-            <a href="#" class="nav-item">
+            <a href="profile.html" class="nav-item">
                 <img src="../assets/icons/profile-blue.svg" alt="" class="nav-icon" width="20" height="20">
                 <span class="nav-text">Profile</span>
             </a>
@@ -437,7 +437,140 @@
         </div>
     </main>
 
-    <script src="../js/modules/navigation.js"></script>
-    <script src="../js/app.js"></script>
+    <script>
+// Dashboard Page - Navigation and App Scripts Bundled
+(function() {
+    // Logout functionality
+    const logoutBtn = document.querySelector('.logout-btn');
+    if (logoutBtn) {
+        logoutBtn.addEventListener('click', function() {
+            if (confirm('Are you sure you want to logout?')) {
+                this.textContent = 'Logging out...';
+                this.disabled = true;
+                setTimeout(() => {
+                    localStorage.removeItem('isLoggedIn');
+                    localStorage.removeItem('userData');
+                    window.location.href = 'login.html';
+                }, 800);
+            }
+        });
+    }
+
+    // Action buttons functionality
+    document.querySelectorAll('.btn-action').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const text = this.textContent.trim();
+            if (text.includes('Schedule')) {
+                window.location.href = 'schedule-donation.html';
+            } else if (text.includes('Fundraiser')) {
+                alert('Fundraiser feature coming soon!');
+            } else if (text.includes('History')) {
+                window.location.href = 'history.html';
+            }
+        });
+    });
+
+    // Activity filter buttons
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            
+            const filter = this.textContent.trim();
+            console.log('Filtering by:', filter);
+        });
+    });
+
+    // View all activity button
+    const viewAllBtn = document.querySelector('.view-all-btn');
+    if (viewAllBtn) {
+        viewAllBtn.addEventListener('click', function() {
+            window.location.href = 'history.html';
+        });
+    }
+
+    // Appointment action buttons
+    const viewTicketBtn = document.querySelector('.btn-view-ticket');
+    if (viewTicketBtn) {
+        viewTicketBtn.addEventListener('click', function() {
+            alert('E-Ticket will be displayed here.\n\nThis would show your appointment confirmation with QR code.');
+        });
+    }
+
+    const cancelBtn = document.querySelector('.btn-cancel');
+    if (cancelBtn) {
+        cancelBtn.addEventListener('click', function() {
+            if (confirm('Are you sure you want to cancel this appointment?')) {
+                alert('Appointment cancelled successfully.');
+                location.reload();
+            }
+        });
+    }
+
+    // Notification button
+    const notificationBtn = document.querySelector('.notification-btn');
+    if (notificationBtn) {
+        notificationBtn.addEventListener('click', function() {
+            alert('You have 2 new notifications:\n\n1. Reminder: Upcoming donation on April 18\n2. Thank you for your last donation!');
+        });
+    }
+
+    // Countdown timer update
+    function updateCountdown() {
+        const appointmentDate = new Date('2025-04-18T10:00:00');
+        const now = new Date();
+        const diff = appointmentDate - now;
+
+        if (diff > 0) {
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+
+            const countdownValues = document.querySelectorAll('.countdown-value');
+            if (countdownValues.length >= 3) {
+                countdownValues[0].textContent = days;
+                countdownValues[1].textContent = hours;
+                countdownValues[2].textContent = minutes;
+            }
+        }
+    }
+
+    // Update countdown every minute
+    updateCountdown();
+    setInterval(updateCountdown, 60000);
+
+    // Animate stat cards on scroll
+    const observerOptions = {
+        threshold: 0.2,
+        rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.stat-card').forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'all 0.6s ease-out';
+        observer.observe(card);
+    });
+
+    // Set active navigation
+    document.querySelectorAll('.nav-item').forEach(item => {
+        item.classList.remove('active');
+        if (item.getAttribute('href') === 'dashboard.html') {
+            item.classList.add('active');
+        }
+    });
+
+    console.log('Dashboard initialized');
+})();
+    </script>
 </body>
 </html>
