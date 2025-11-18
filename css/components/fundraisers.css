@@ -310,10 +310,51 @@
 
 .fundraiser-action {
     margin-top: auto;
+    display: flex;
+    gap: 12px;
+}
+
+.btn-view-campaign {
+    flex: 1;
+    background: #FFFFFF;
+    color: #E63946;
+    border: 2px solid #E63946;
+    border-radius: 12px;
+    padding: 14px 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-view-campaign:hover {
+    background: #E63946;
+    color: #FFFFFF;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(230, 57, 70, 0.25), 0 4px 10px rgba(230, 57, 70, 0.15);
+}
+
+.btn-view-campaign svg {
+    width: 18px;
+    height: 18px;
+    stroke: currentColor;
+    transition: transform 0.3s ease;
+}
+
+.btn-view-campaign:hover svg {
+    transform: scale(1.1);
 }
 
 .btn-donate {
-    width: 100%;
+    flex: 1;
     background: linear-gradient(135deg, #E63946 0%, #D12835 100%);
     color: #FFFFFF;
     border: none;

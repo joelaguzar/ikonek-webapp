@@ -85,13 +85,89 @@
                 </div>
             </div>
             <div class="header-actions">
-                <button class="notification-btn" aria-label="Notifications">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M18 8C18 6.4087 17.3679 4.88258 16.2426 3.75736C15.1174 2.63214 13.5913 2 12 2C10.4087 2 8.88258 2.63214 7.75736 3.75736C6.63214 4.88258 6 6.4087 6 8C6 15 3 17 3 17H21C21 17 18 15 18 8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M13.73 21C13.5542 21.3031 13.3019 21.5547 12.9982 21.7295C12.6946 21.9044 12.3504 21.9965 12 21.9965C11.6496 21.9965 11.3054 21.9044 11.0018 21.7295C10.6982 21.5547 10.4458 21.3031 10.27 21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <span class="notification-badge">2</span>
-                </button>
+                <div class="notification-wrapper">
+                    <button class="notification-btn" aria-label="Notifications">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 8C18 6.4087 17.3679 4.88258 16.2426 3.75736C15.1174 2.63214 13.5913 2 12 2C10.4087 2 8.88258 2.63214 7.75736 3.75736C6.63214 4.88258 6 6.4087 6 8C6 15 3 17 3 17H21C21 17 18 15 18 8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M13.73 21C13.5542 21.3031 13.3019 21.5547 12.9982 21.7295C12.6946 21.9044 12.3504 21.9965 12 21.9965C11.6496 21.9965 11.3054 21.9044 11.0018 21.7295C10.6982 21.5547 10.4458 21.3031 10.27 21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="notification-badge">2</span>
+                    </button>
+                    
+                    <!-- Notification Dropdown Panel -->
+                    <div class="notification-panel" id="notificationPanel">
+                        <div class="notification-header">
+                            <h3 class="notification-title">Notifications</h3>
+                            <button class="mark-all-read-btn" id="markAllReadBtn">Mark all as read</button>
+                        </div>
+                        
+                        <div class="notification-list" id="notificationList">
+                            <div class="notification-item unread" data-id="1">
+                                <div class="notification-indicator"></div>
+                                <div class="notification-icon notification-icon-reminder">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                                        <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    </svg>
+                                </div>
+                                <div class="notification-content">
+                                    <h4 class="notification-item-title">Upcoming Donation Reminder</h4>
+                                    <p class="notification-item-text">Your blood donation appointment is scheduled for April 18 at 10:00 AM. Don't forget to stay hydrated!</p>
+                                    <span class="notification-time">2 hours ago</span>
+                                </div>
+                                <button class="notification-close" aria-label="Close notification">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            
+                            <div class="notification-item unread" data-id="2">
+                                <div class="notification-indicator"></div>
+                                <div class="notification-icon notification-icon-success">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.709 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.61096 17.4371C2.43727 15.628 1.87979 13.4881 2.02168 11.3363C2.16356 9.18455 2.99721 7.13631 4.39828 5.49706C5.79935 3.85781 7.69279 2.71537 9.79619 2.24013C11.8996 1.7649 14.1003 1.98232 16.07 2.85999" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M22 4L12 14.01L9 11.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <div class="notification-content">
+                                    <h4 class="notification-item-title">Thank You for Your Donation!</h4>
+                                    <p class="notification-item-text">Your recent blood donation helped save 3 lives. You're a hero!</p>
+                                    <span class="notification-time">1 day ago</span>
+                                </div>
+                                <button class="notification-close" aria-label="Close notification">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            
+                            <div class="notification-item" data-id="3">
+                                <div class="notification-indicator"></div>
+                                <div class="notification-icon notification-icon-info">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                                        <path d="M12 16V12M12 8H12.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <div class="notification-content">
+                                    <h4 class="notification-item-title">New Fundraiser Campaign</h4>
+                                    <p class="notification-item-text">A new fundraiser "Hope for Children" is now live. Consider contributing.</p>
+                                    <span class="notification-time">3 days ago</span>
+                                </div>
+                                <button class="notification-close" aria-label="Close notification">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="notification-footer">
+                            <a href="#" class="view-all-notifications">View All Notifications</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </header>
 
@@ -463,7 +539,7 @@
             if (text.includes('Schedule')) {
                 window.location.href = 'schedule-donation.html';
             } else if (text.includes('Fundraiser')) {
-                alert('Fundraiser feature coming soon!');
+                window.location.href = 'fundraisers.html';
             } else if (text.includes('History')) {
                 window.location.href = 'history.html';
             }
@@ -507,13 +583,79 @@
         });
     }
 
-    // Notification button
+    // Notification functionality
     const notificationBtn = document.querySelector('.notification-btn');
-    if (notificationBtn) {
-        notificationBtn.addEventListener('click', function() {
-            alert('You have 2 new notifications:\n\n1. Reminder: Upcoming donation on April 18\n2. Thank you for your last donation!');
+    const notificationPanel = document.getElementById('notificationPanel');
+    const notificationBadge = document.querySelector('.notification-badge');
+    const markAllReadBtn = document.getElementById('markAllReadBtn');
+    const notificationList = document.getElementById('notificationList');
+    
+    // Toggle notification panel
+    if (notificationBtn && notificationPanel) {
+        notificationBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            notificationPanel.classList.toggle('show');
+        });
+        
+        // Close panel when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!notificationPanel.contains(e.target) && !notificationBtn.contains(e.target)) {
+                notificationPanel.classList.remove('show');
+            }
         });
     }
+    
+    // Update notification badge count
+    function updateNotificationCount() {
+        const unreadCount = document.querySelectorAll('.notification-item.unread').length;
+        if (notificationBadge) {
+            if (unreadCount > 0) {
+                notificationBadge.textContent = unreadCount;
+                notificationBadge.style.display = 'flex';
+            } else {
+                notificationBadge.style.display = 'none';
+            }
+        }
+    }
+    
+    // Mark all as read
+    if (markAllReadBtn) {
+        markAllReadBtn.addEventListener('click', function() {
+            document.querySelectorAll('.notification-item.unread').forEach(item => {
+                item.classList.remove('unread');
+            });
+            updateNotificationCount();
+        });
+    }
+    
+    // Mark individual notification as read when clicked
+    if (notificationList) {
+        notificationList.addEventListener('click', function(e) {
+            const notificationItem = e.target.closest('.notification-item');
+            if (notificationItem && !e.target.closest('.notification-close')) {
+                notificationItem.classList.remove('unread');
+                updateNotificationCount();
+            }
+        });
+    }
+    
+    // Close individual notifications
+    document.querySelectorAll('.notification-close').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const notificationItem = this.closest('.notification-item');
+            if (notificationItem) {
+                notificationItem.style.animation = 'slideOut 0.3s ease-out';
+                setTimeout(() => {
+                    notificationItem.remove();
+                    updateNotificationCount();
+                }, 280);
+            }
+        });
+    });
+    
+    // Initialize notification count
+    updateNotificationCount();
 
     // Countdown timer update
     function updateCountdown() {
